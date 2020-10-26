@@ -23,7 +23,8 @@ for(var i = 0; i < monthsYear.length; i++){
   }
 }
 
-document.getElementById('root').innerHTML = "<p>" + month + " " + day + "," + year + "</p>";
+var uiDate =
+document.getElementById('date').innerHTML = month + " " + day + ", " + year;
 
 console.log(date);
 
