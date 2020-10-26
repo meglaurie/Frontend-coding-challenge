@@ -1,5 +1,3 @@
-import data from './data.js';
-
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -13,6 +11,19 @@ function closeNav() {
 
 
 var date = new Date();
+
+var day = date.getDate();
+var month = date.getMonth();
+var year = date.getFullYear();
+var monthsYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+for(var i = 0; i < monthsYear.length; i++){
+  if(month == i){
+    month = monthsYear[i];
+  }
+}
+
+document.getElementById('root').innerHTML = "<p>" + month + " " + day + "," + year + "</p>";
 
 console.log(date);
 

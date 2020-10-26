@@ -32,6 +32,7 @@
         </div>
       </div>
     </nav>
+    <div id="root"></div>
     <main id="main">
       <!-- <div class="card">
         <img src="" alt="Image">
@@ -41,10 +42,8 @@
     </main>
     <form action="#">
       <div class="img-file-container">
-        <!-- <input class="img-file-input" id="img-input" type="file"> -->
-        <!-- <label tabindex="0" for="img-input" class="input-file-trigger"></label> -->
-        <input type='file' onchange="readURL(this);" />
-        <img id="img" src="#" alt="your image" />
+        <input name = "image" type='file' onchange="readURL(this);" />
+        <img id="img" src="#" alt="image" />
       </div>
       <p class="file-return"></p>
     </form>
