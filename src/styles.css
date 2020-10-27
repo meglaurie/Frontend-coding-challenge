@@ -96,6 +96,7 @@ body {
   max-width: 500px;
   border: 2px solid #000;
   margin: 0 auto;
+  display: none;
 }
 #img{
   width: 100%;
@@ -109,4 +110,10 @@ body {
 #card-txt{
   width: 80%;
   margin: 15px;
+}
+#welcome{
+
+}
+#add-data{
+  display: none;
 }

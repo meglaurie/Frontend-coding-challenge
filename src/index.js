@@ -9,6 +9,11 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 
+// Welcome transition
+function welcome(){
+  document.getElementById('add-data').style.display = "block";
+  document.getElementById('welcome').style.display = "none";
+}
 // The Date
 var date = new Date();
 var day = date.getDate();
@@ -40,5 +45,6 @@ function getInputValue(){
     var inputVal = document.getElementById("txt-input").value;
     document.getElementById('card-txt').innerHTML = inputVal;
     document.getElementById("txt-input").value = " ";
+    document.getElementById("card").style.display = "block";
 
 }
