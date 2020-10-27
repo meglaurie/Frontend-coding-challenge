@@ -34,3 +34,11 @@ function uploadImg(input) {
             reader.readAsDataURL(input.files[0]);
         }
     }
+
+// Get text from user
+function getInputValue(){
+    var inputVal = document.getElementById("txt-input").value;
+    console.log(inputVal);
+    document.getElementById('card-txt').innerHTML = inputVal;
+
+}
