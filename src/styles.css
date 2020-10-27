@@ -85,9 +85,28 @@ body {
   padding: 16px;
 }
 
-
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+/* card  styles*/
+.card{
+  width:95%;
+  max-width: 500px;
+  border: 2px solid #000;
+  margin: 0 auto;
+}
+#img{
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+#date{
+  margin: 15px;
+}
+#card-txt{
+  width: 80%;
+  margin: 15px;
 }

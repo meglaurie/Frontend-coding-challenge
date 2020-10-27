@@ -30,15 +30,15 @@ function uploadImg(input) {
             reader.onload = function (e) {
                document.getElementById("img").src = e.target.result;
             };
-
+            console.log(input.files[0]);
             reader.readAsDataURL(input.files[0]);
         }
     }
 
-// Get text from user
+// Get text from user and clear input feild
 function getInputValue(){
     var inputVal = document.getElementById("txt-input").value;
-    console.log(inputVal);
     document.getElementById('card-txt').innerHTML = inputVal;
+    document.getElementById("txt-input").value = " ";
 
 }
