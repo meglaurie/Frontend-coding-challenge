@@ -9,11 +9,6 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 
-// Welcome transition
-function welcome(){
-  document.getElementById('add-data').style.display = "block";
-  document.getElementById('welcome').style.display = "none";
-}
 // The Date
 var date = new Date();
 var day = date.getDate();
@@ -29,11 +24,14 @@ document.getElementById('date').innerHTML = month + " " + day + ", " + year;
 
 // Get image from user
 function uploadImg(input) {
+  console.log(input.files);
         if (input.files && input.files[0]) {
             var reader = new FileReader();
 
             reader.onload = function (e) {
                document.getElementById("img").src = e.target.result;
+               console.log(this.result);
+               console.log(this);
             };
             console.log(input.files[0]);
             reader.readAsDataURL(input.files[0]);
@@ -45,6 +43,19 @@ function getInputValue(){
     var inputVal = document.getElementById("txt-input").value;
     document.getElementById('card-txt').innerHTML = inputVal;
     document.getElementById("txt-input").value = " ";
-    document.getElementById("card").style.display = "block";
 
+}
+
+console.log(document.getElementById('imgTxt-input').files);
+
+const submit = document.getElementById('imgTxtSubmit');
+const img = document.getElementById('imgTxt-input');
+
+function uploadImgTxt(){
+uploadImg(img);
+var inputVal = document.getElementById("txtImg-input").value;
+document.getElementById('card-txt').innerHTML = inputVal;
+document.getElementById('txtImg-input').value = " ";
+ 
+  console.log("clicked");
 }
