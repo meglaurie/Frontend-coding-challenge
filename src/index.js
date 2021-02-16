@@ -16,6 +16,7 @@ const cardContainer = document.getElementById('card-container');
 const card = document.createElement('div');
 card.classList.add("card");
 
+
 //Save to local storage
 // function saveLocalCards(card){
 //   let cards;
@@ -30,11 +31,84 @@ card.classList.add("card");
 
 
 // Get image from user
-function uploadImg(input) {
-  // console.log(input.files);
+// function uploadImg(input) {
+//   // console.log(input.files);
+//   const cardImg = document.createElement('img');
+  
+//         if (input.files && input.files[0]) {
+//             var reader = new FileReader();
+
+//             reader.onload = function (e) {
+//                cardImg.src = e.target.result;
+//                cardImg.classList.add('card-img');
+//                card.appendChild(cardImg);
+//             };
+//             // console.log(input.files[0]);
+//             reader.readAsDataURL(input.files[0]);
+//         }
+//         console.log('img upload');
+//     }
+
+
+// // The Date
+
+// function date(){
+//   const cardDate = document.createElement('h4');
+//   cardDate.classList.add('date');
+//   var date = new Date();
+//   var day = date.getDate();
+//   var month = date.getMonth();
+//   var year = date.getFullYear();
+//   var monthsYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+//   for(var i = 0; i < monthsYear.length; i++){
+//     if(month == i){
+//       month = monthsYear[i];
+//     }
+//   }
+//   cardDate.innerHTML = month + " " + day + ", " + year;
+//   card.appendChild(cardDate);
+//   console.log('Get date');
+// };
+
+// // Get text from user and clear input feild
+// function getInputValue(){
+//     const cardTxt = document.createElement('p');
+//     cardTxt.classList.add('card-txt');
+//     var inputVal = document.getElementById("txtImg-input").value;
+//     cardTxt.innerHTML = inputVal;
+//     document.getElementById("txtImg-input").value = " ";
+//     card.appendChild(cardTxt);
+//     console.log('get text value');
+// }
+
+// function createCard(){
+//   const card = document.createElement('div');
+//   card.classList.add("card");
+//   uploadImg(img);
+//   date()
+//   getInputValue();
+ 
+  
+// }
+
+// function uploadImgTxt(){
+//   createCard();
+ 
+//   cardContainer.appendChild(card);
+//   // if image has a value == true then createElement img 
+//   // and appendchild to card appendChild to conatiner 
+// // 
+// }
+
+function uploadImgTxt(){
+
+  const card = document.createElement('div');
+  card.classList.add("card");
+
+  // upload Image 
   const cardImg = document.createElement('img');
   
-        if (input.files && input.files[0]) {
+        if (img.files && img.files[0]) {
             var reader = new FileReader();
 
             reader.onload = function (e) {
@@ -43,34 +117,30 @@ function uploadImg(input) {
                card.appendChild(cardImg);
             };
             // console.log(input.files[0]);
-            reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(img.files[0]);
         }
         console.log('img upload');
+
+
+    // The date
+    const cardDate = document.createElement('h4');
+    cardDate.classList.add('date');
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    var monthsYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    for(var i = 0; i < monthsYear.length; i++){
+      if(month == i){
+        month = monthsYear[i];
+      }
     }
+    cardDate.innerHTML = month + " " + day + ", " + year;
+    card.appendChild(cardDate);
+    console.log('Get date');
 
 
-// The Date
-
-function date(){
-  const cardDate = document.createElement('h4');
-  cardDate.classList.add('date');
-  var date = new Date();
-  var day = date.getDate();
-  var month = date.getMonth();
-  var year = date.getFullYear();
-  var monthsYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  for(var i = 0; i < monthsYear.length; i++){
-    if(month == i){
-      month = monthsYear[i];
-    }
-  }
-  cardDate.innerHTML = month + " " + day + ", " + year;
-  card.appendChild(cardDate);
-  console.log('Get date');
-};
-
-// Get text from user and clear input feild
-function getInputValue(){
+    // Get text 
     const cardTxt = document.createElement('p');
     cardTxt.classList.add('card-txt');
     var inputVal = document.getElementById("txtImg-input").value;
@@ -78,21 +148,6 @@ function getInputValue(){
     document.getElementById("txtImg-input").value = " ";
     card.appendChild(cardTxt);
     console.log('get text value');
-}
 
-function createCard(element){
-  const card = document.createElement('div');
-  card.classList.add("card");
-  card.appendChild(element);
-  cardContainer.appendChild(card);
-}
-
-function uploadImgTxt(){
-  uploadImg(img);
-  date()
-  getInputValue();
-  cardContainer.appendChild(card);
-  // if image has a value == true then createElement img 
-  // and appendchild to card appendChild to conatiner 
-// 
+    cardContainer.appendChild(card);
 }
