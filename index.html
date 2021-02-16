@@ -5,30 +5,26 @@
     <title>Frontend Coding Challenge</title>
     <link rel="stylesheet" href="src/styles.css">
     <script src="https://use.fontawesome.com/01a25d8417.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/12dbb86165.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <nav>
       <div class="topnav" id="myTopnav">
         <a href="#">Home</a>
         <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+    
         <span class="menu-btn" onclick="openNav()">&#9776;</span>
-        <div class="user-icon">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="logo">
-          <i class="fas fa-certificate"></i>
-        </div>
+       <p>News Feed</p>
       </div>
       <div class="mobile-nav">
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
+        
         </div>
       </div>
     </nav>
@@ -36,7 +32,7 @@
       <div id="welcome">
         <h2>News Feed</h2>
         <h3>Press button to add text and images.</h3>
-        <button id = "displayBtn" type="button" name="button" >Button</button>
+        <button id = "displayBtn" class="btn btn-primary" type="button" name="button" ><i class="fas fa-plus"></i></button>
       </div>
       <div id="card-container"></div>
       <div id="imgTxtContainer">
@@ -45,9 +41,9 @@
             <input id="txtImg-input" class = "modalElement" type="text" name="">
           </div>
           <div class="img-file-container">
-            <input id="imgTxt-input" class = "modalElement" name = "image" type='file'/>
+            <input id="imgTxt-input" class = "modalElement " name = "image" type='file'/>
           </div>
-          <button id="imgTxtSubmit" class = "modalElement" onclick="uploadImgTxt();">Submit</button>
+          <button id="imgTxtSubmit" class = "modalElement btn btn-primary" onclick="uploadImgTxt();">Submit</button>
         </div>
     </main>
   </body>
