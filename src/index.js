@@ -9,6 +9,8 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 
+const displayBtn = document.getElementById('displayBtn');
+const modalContent = document.getElementById('imgTxtContainer');
 const submit = document.getElementById('imgTxtSubmit');
 const img = document.getElementById('imgTxt-input');
 const cardContainer = document.getElementById('card-container');
@@ -17,17 +19,17 @@ const card = document.createElement('div');
 card.classList.add("card");
 
 
-//Save to local storage
-// function saveLocalCards(card){
-//   let cards;
-//   if(localStorage.getItem('cards') === null){
-//     cards = [];
-//   }else{
-//     cards = JSON.parse(localStorage.getItem('cards'));
-//   }
-//   cards.push(card);
-//   localStorage.setItem('cards', JSON.stringify(cards));
-// }
+// Save to local storage
+function saveLocalCards(card){
+  let cards;
+  if(localStorage.getItem('cards') === null){
+    cards = [];
+  }else{
+    cards = JSON.parse(localStorage.getItem('cards'));
+  }
+  cards.push(card);
+  localStorage.setItem('cards', JSON.stringify(cards));
+}
 
 
 // Get image from user
@@ -81,24 +83,19 @@ card.classList.add("card");
 //     console.log('get text value');
 // }
 
-// function createCard(){
-//   const card = document.createElement('div');
-//   card.classList.add("card");
-//   uploadImg(img);
-//   date()
-//   getInputValue();
- 
-  
-// }
 
 // function uploadImgTxt(){
 //   createCard();
- 
 //   cardContainer.appendChild(card);
 //   // if image has a value == true then createElement img 
 //   // and appendchild to card appendChild to conatiner 
 // // 
 // }
+
+function closeModal(){
+  modalContent.style.display = 'none';
+  console.log('close');
+}
 
 function uploadImgTxt(){
 
@@ -107,13 +104,12 @@ function uploadImgTxt(){
 
   // upload Image 
   const cardImg = document.createElement('img');
-  
+  cardImg.classList.add('card-img');
         if (img.files && img.files[0]) {
             var reader = new FileReader();
 
             reader.onload = function (e) {
                cardImg.src = e.target.result;
-               cardImg.classList.add('card-img');
                card.appendChild(cardImg);
             };
             // console.log(input.files[0]);
@@ -139,7 +135,6 @@ function uploadImgTxt(){
     card.appendChild(cardDate);
     console.log('Get date');
 
-
     // Get text 
     const cardTxt = document.createElement('p');
     cardTxt.classList.add('card-txt');
@@ -150,4 +145,25 @@ function uploadImgTxt(){
     console.log('get text value');
 
     cardContainer.appendChild(card);
+
+    closeModal();
+  
+    let cards;
+    if(localStorage.getItem('cards') === null){
+      cards = [];
+    }else{
+      cards = JSON.parse(localStorage.getItem('cards'));
+    }
+    cards.push(card);
+    localStorage.setItem('cards', JSON.stringify(cards));
 }
+
+// localStorage.clear();
+
+displayBtn.addEventListener("click", function() {
+  if(modalContent.style.display == 'none'){
+    modalContent.style.display = 'block';
+  }else{
+    modalContent.style.display = 'none';
+  }
+});

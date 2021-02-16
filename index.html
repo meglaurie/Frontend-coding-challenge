@@ -32,31 +32,15 @@
         </div>
       </div>
     </nav>
-
     <main id="main">
       <div id="welcome">
         <h2>News Feed</h2>
         <h3>Press button to add text and images.</h3>
-        <button type="button" name="button" onclick="welcome();" >Button</button>
+        <button id = "displayBtn" type="button" name="button" >Button</button>
       </div>
       <div id="card-container"></div>
-      <!-- <div class="card">
-        <img id="img" src="#" alt="image" />
-        <h4 id="date"></h4>
-        <p id="card-txt"></p>
-      </div> -->
-      <!-- <div id="add-data">
-        <form action="#">
-          <div class="img-file-container">
-            <input name = "image" type='file' onchange="uploadImg(this);" multiple />
-          </div>
-          <div class="">
-            <input id="txt-input" type="text" name="">
-          </div>
-          <button onclick="getInputValue();">Submit</button>
-        </form>
-      </div> -->
       <div id="imgTxtContainer">
+        <div id="modalContent">
           <div class="img-file-container">
             <input id="imgTxt-input" name = "image" type='file'/>
           </div>
@@ -64,11 +48,8 @@
             <input id="txtImg-input" type="text" name="">
           </div>
           <button id="imgTxtSubmit" onclick="uploadImgTxt();">Submit</button>
-        <div>
-
+        </div>
     </main>
-
-
   </body>
   <script type="text/javascript" src="src/index.js"></script>
 </html>
