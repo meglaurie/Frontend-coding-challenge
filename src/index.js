@@ -148,14 +148,14 @@ function uploadImgTxt(){
 
     closeModal();
   
-    let cards;
-    if(localStorage.getItem('cards') === null){
-      cards = [];
-    }else{
-      cards = JSON.parse(localStorage.getItem('cards'));
-    }
-    cards.push(card);
-    localStorage.setItem('cards', JSON.stringify(cards));
+    // let cards;
+    // if(localStorage.getItem('cards') === null){
+    //   cards = [];
+    // }else{
+    //   cards = JSON.parse(localStorage.getItem('cards'));
+    // }
+    // cards.push(card);
+    // localStorage.setItem('cards', JSON.stringify(cards));
 }
 
 // localStorage.clear();

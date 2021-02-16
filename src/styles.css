@@ -140,10 +140,11 @@ body {
   padding: 20px;
   border: 1px solid #888;
   width: 50%; /* Could be more or less, depending on screen size */
+  position: relative;
 }
 
 #imgTxt-input{
-  margin: 0 auto;
+ 
 }
 
 #txtImg-input{
@@ -152,6 +153,22 @@ body {
 
 #imgTxtSubmit{
 
+}
+
+.text-input-container{
+
+}
+
+
+.modalElement{
+  display: block;
+  margin: 20px auto;
+
+}
+
+.img-file-container{
+  display: block;
+  margin: 20px auto 20px 103px
 }
 
 
