@@ -168,4 +168,8 @@ displayBtn.addEventListener("click", function() {
   }
 });
 
+const close = document.getElementById('modalClose');
 
+close.addEventListener("click", function(){
+  modalContent.style.display = 'none';
+});
