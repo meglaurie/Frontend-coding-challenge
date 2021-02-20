@@ -84,8 +84,9 @@ function uploadImgTxt(){
     cardTxt.innerHTML = inputVal;
     document.getElementById("txtImg-input").value = " ";
     card.appendChild(cardTxt);
-    const parent = document.getElementById('main');
-    parent.appendChild(cardContainer, card);
+
+    // const parent = document.getElementById('main');
+    // parent.appendChild(cardContainer, card);
     
     closeModal();
     // saveLocalCards(card);
