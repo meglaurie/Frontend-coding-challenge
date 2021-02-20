@@ -7,11 +7,11 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #000;
 }
 
 .topnav a {
-  float: left;
+  float: right;
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -135,7 +135,7 @@ body {
 
 #imgTxtContainer{
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 3; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -210,6 +210,7 @@ body {
   grid-column-start: 2;
   grid-column-end: 2;
   margin: 0 auto;
+  z-index: 2;
 }
 
 #welcome h2{

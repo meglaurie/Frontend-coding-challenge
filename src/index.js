@@ -104,27 +104,25 @@ close.addEventListener("click", function(){
   modalContent.style.display = 'none';
 });
 
-function runOnScroll() {
+// function runOnScroll() {
 
-  if(window.scrollY == 0){
-    displayBtn.style.removeProperty("position");
-    displayBtn.style.removeProperty("bottom");
-    displayBtn.style.removeProperty("right");
-  console.log("up")
+//   if(window.scrollY == 0){
+//     displayBtn.style.removeProperty("position");
+//     displayBtn.style.removeProperty('transform');
+//   console.log("up")
 
-  }
-  else{
-    displayBtn.style.position = "fixed";
-    displayBtn.style.bottom = '50px';
-    displayBtn.style.right = '50px';
-    displayBtn.style.tansition = 'bottom 1s ease-in linear';
-    console.log("scroll!");
+//   }
+//   else{
+//     displayBtn.style.position = "fixed";
+//     displayBtn.style.transform = "translate(200px, 100%)";
+//     displayBtn.style.transition = 'transform 1s ease-in';
+//     console.log("scroll!");
 
-  }
-  //  var addBtn = document.getElementsById('displayBtn');
+//   }
+//   //  var addBtn = document.getElementsById('displayBtn');
   
-}; 
-document.addEventListener("scroll", runOnScroll);
+// }; 
+// document.addEventListener("scroll", runOnScroll);
 
 
 
