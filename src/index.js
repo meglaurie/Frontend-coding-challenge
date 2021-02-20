@@ -31,7 +31,7 @@ function saveLocalCards(card){
     imgs = JSON.parse(localStorage.getItem('imgs'));
   }
   imgs.push(card);
-  console.log(card);
+  // console.log(card);
   localStorage.setItem('cards', JSON.stringify(cards));
 }
 
@@ -52,7 +52,9 @@ function uploadImgTxt(){
 
             reader.onload = function (e) {
                cardImg.src = e.target.result;
-               card.appendChild(cardImg);
+              //  card.appendChild(cardImg);
+              
+               card.insertBefore(cardImg, cardDate);
             };
             // console.log(input.files[0]);
             reader.readAsDataURL(img.files[0]);
@@ -75,6 +77,7 @@ function uploadImgTxt(){
     }
     cardDate.innerHTML = month + " " + day + ", " + year;
     card.appendChild(cardDate);
+ 
    
 
     // Get text 
@@ -84,17 +87,12 @@ function uploadImgTxt(){
     cardTxt.innerHTML = inputVal;
     document.getElementById("txtImg-input").value = " ";
     card.appendChild(cardTxt);
-
-    // const parent = document.getElementById('main');
-    // parent.appendChild(cardContainer, card);
+ 
+    cardContainer.appendChild(card);
     
     closeModal();
-    // saveLocalCards(card);
+    
 }
-
-let lastCard = uploadImgTxt();
-
-// localStorage.clear();
 
 displayBtn.addEventListener("click", function() {
     modalContent.style.display = 'block';
