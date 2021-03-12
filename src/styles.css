@@ -1,19 +1,21 @@
 body {
-  background-color: #333333 !important;
-  color: #f2f2f2 !important;
+  background: linear-gradient(45deg,  #0bdb9d, #0bc6db) !important;
+  height: 100vh;
+  /* background-color: #333333 !important;
+  color: #f2f2f2 !important; */
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .topnav {
   overflow: hidden;
-  background-color: #000;
+  background: linear-gradient(140deg,  rgba(252, 252, 252, 0.9), rgba(252, 252, 252,0.4));
 }
 
 .topnav a {
   float: right;
   display: block;
-  color: #f2f2f2;
+  color:#165c75;;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -25,10 +27,10 @@ body {
   color: black;
 }
 
-.topnav a.active {
+/* .topnav a.active {
   background-color: pink;
   color: white;
-}
+} */
 
 .topnav .icon {
   display: none;
@@ -96,15 +98,16 @@ body {
 .card{
   max-width: 500px;
   max-height: 600px;
-  border: 1px solid #6a6b6b;
+  border-radius: 14px;
+  /* border: 1px solid #6a6b6b;
   border-bottom: 1px solid #6a6b6b;
-  border-top: 1px solid #6a6b6b;
-  margin: 0px auto;
+  border-top: 1px solid #6a6b6b; */
+  margin: 25px auto;
   /* display: none; */
-  width: 60%;
+  width: 85%;
   height: auto;
-  background: #333;
-  color: #f2f2f2;
+  background: #fff;
+  color: #165c75;
   position: relative;
   overflow: hidden;
 }
@@ -112,11 +115,16 @@ body {
   width: 90%;
   margin-top: 15px;
   margin-left: 5%;
-  border: 1px solid #333;
+  background-color: lightcyan;
+  /* border: 1px solid #333; */
   border-radius: 15px;
   height: auto;
   max-height: 300px;
-  object-fit: cover;                      
+  object-fit: contain;                      
+}
+#card-container{
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .date{
   margin: 15px;
@@ -126,12 +134,6 @@ body {
   margin: 15px;
   text-align: justify;
 }
-#welcome{
-
-}
-/* #add-data{
-  display: none;
-} */
 
 #imgTxtContainer{
   position: fixed; /* Stay in place */
@@ -157,25 +159,8 @@ body {
   width: 50%; /* Could be more or less, depending on screen size */
   position: relative;
 }
-
-#imgTxt-input{
- 
-}
-
-#txtImg-input{
-
-}
-
-#imgTxtSubmit{
-
-}
-
-.text-input-container{
-
-}
-
 .btn{
-  background-color: #26eaed !important ;
+  background-color:#165c75; !important ;
   color: #f2f2f2;
 }
 
@@ -186,17 +171,36 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 0px;
   max-width: 500px;
+  height: 200px;
   font-family: 'Shrikhand', cursive;
   /* display: block; */
   text-align: center;
-  margin-bottom: 10px;;
+  margin-bottom: 10px;
+  color: #165c75;
+ 
 }
 
-.title{
+.userIcon{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  width: 60px;
+  text-align: center;
+  margin: 10px 10px 10px -26px;
+}
+.userName{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.fa-plus-circle{
+  padding-top: 6px;
+}
+
+/* .title{
   grid-column-start: 1;
   grid-column-end: 3;
 
-}
+} */
 
 .subtitle{
   grid-column-start: 1;
@@ -212,10 +216,13 @@ body {
   margin: 0 auto;
   z-index: 2;
 }
-
-#welcome h2{
-  font-size: 3em;
-  text-align: center;
+.title, h2{
+  font-family: 'Shrikhand', cursive;
+  float: left;
+  margin: 15px;
+  font-size: 1.5em;
+  text-align: left;
+  color:#165c75; !important;
 }
 
 .modalElement{
@@ -243,35 +250,22 @@ body {
   left:92%;
 }
 
+.glass-container{
+  height: 85vh;
+  max-height: 85vh;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  background: linear-gradient(140deg,  rgba(252, 252, 252, 1), rgba(252, 252, 252,0.4));
+  border-radius: 14px;
+  overflow: scroll;
 
-.card {
-  /* filter: contrast(25000%) saturate(90%);
-  overflow: hidden;
-  transform: translateZ(0);   */
 }
 
-/* .card > * {
-  filter: brightness(0.5);
-} */
-
-/* .card::after {
-  content: '';
-  position: absolute;
-  top: -100%;
-  left: -100%;
-  right: -100%;
-  bottom: -100%;
-  background-blend-mode: multiply;
-  background:
-      radial-gradient(8px 8px, cyan, white),
-      radial-gradient(8px 8px, magenta, white),
-      radial-gradient(8px 8px, yellow, white);
-  background-size: 8px 8px;
-  background-position: 0 -3px, -2px 0, 2px 0;
-  mix-blend-mode: screen;
-  pointer-events: none;
-  transform: rotate(20deg);
-  z-index: 1;
-} */
+.glass-sidebar{
+  height: 85vh;
+  padding: 25px;
+  background: linear-gradient(140deg,  rgba(252, 252, 252, 1), rgba(252, 252, 252,0.4));
+}
 
 
