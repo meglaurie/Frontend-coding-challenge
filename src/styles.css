@@ -23,8 +23,8 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #0bc6db;
+  color: #f2f2f2;
 }
 
 /* .topnav a.active {
@@ -157,15 +157,22 @@ body {
   color:#333;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #888;
+  border-radius: 14px;
   width: 50%; /* Could be more or less, depending on screen size */
   position: relative;
 }
 .btn{
-  background-color:#165c75; !important ;
+  background-color:#165c75;
   color: #f2f2f2;
 }
 
+.btn:hover{
+  background-color:#f2f2f2;
+  color: #165c75;
+}
+.fa-plus-circle:hover{
+  color: #165c75;
+}
 #welcome{
   position: relative;
   margin: 0px auto;
@@ -224,7 +231,7 @@ body {
   margin: 15px;
   font-size: 1.5em;
   text-align: left;
-  color:#165c75; !important;
+  color:#165c75; 
 }
 
 .modalElement{
@@ -252,9 +259,13 @@ body {
   left:92%;
 }
 
-.glass-container{
+.container{
   height: 85vh;
   max-height: 85vh;
+  overflow: scroll;
+}
+
+.glass-container{
   display: flex;
   width: 80%;
   margin: 0 auto;
@@ -262,7 +273,6 @@ body {
   /* filter: blur(1.5rem); */
   backdrop-filter: blur(2rem);
   border-radius: 14px;
-  overflow: scroll;
   position: relative;
   z-index: 5;
 
@@ -271,6 +281,7 @@ body {
 .glass-sidebar{
   flex-grow: 1;
   padding: 25px;
+  border-radius: 14px 0px 0px 14px;
   background: linear-gradient(140deg,  rgba(252, 252, 252, 1), rgba(252, 252, 252,0.4));
 }
 
@@ -278,8 +289,8 @@ body {
   width: 50px;
   color: linear-gradient(140deg,  rgba(252, 252, 252, 1), rgba(252, 252, 252,0.4));
 }
-.circle1, 
-.circle2{
+
+.circle{
   border-radius: 100%;
   /* background-color: red; */
   background: linear-gradient(140deg,  rgba(252, 252, 252, 1), rgba(252, 252, 252,0.4));
@@ -296,4 +307,11 @@ body {
 .circle2{
   left: 40px;
   bottom: 23px;
+}
+
+.circle3{
+  height: 25rem;
+  width: 25rem;
+  right: 350px;
+  bottom: 63px;
 }
