@@ -24,6 +24,7 @@ card.classList.add("card");
 function saveLocalCards(card){
   let imgs;
   let txt;
+
   if(localStorage.getItem('imgs') === null){
     imgs = [];
     txt = [];
@@ -81,6 +82,7 @@ function uploadImgTxt(){
    
 
     // Get text 
+    const firstCard = cardContainer.firstChild;
     const cardTxt = document.createElement('p');
     cardTxt.classList.add('card-txt');
     var inputVal = document.getElementById("txtImg-input").value;
@@ -88,7 +90,7 @@ function uploadImgTxt(){
     document.getElementById("txtImg-input").value = " ";
     card.appendChild(cardTxt);
  
-    cardContainer.appendChild(card);
+    cardContainer.insertBefore(card, firstCard);
     
     closeModal();
     
